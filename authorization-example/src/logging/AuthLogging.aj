@@ -9,15 +9,15 @@ public aspect AuthLogging extends IndentedLogging {
 	declare precedence: AuthLogging, *;
 
 	public pointcut accountActivities()
- : execution(public * Account.*(..))
- || execution(public * InterAccountTransferSystem.*(..));
+	: execution(public * Account.*(..))
+	|| execution(public * InterAccountTransferSystem.*(..));
 
 	public pointcut authenticationActivities()
- : call(* LoginContext.login(..));
+	: call(* LoginContext.login(..));
 
 	public pointcut loggedOperations() 
- : accountActivities() 
- || authenticationActivities();
+	: accountActivities() 
+	|| authenticationActivities();
 
 	before() : loggedOperations() {
 		Signature sig = thisJoinPointStaticPart.getSignature();
