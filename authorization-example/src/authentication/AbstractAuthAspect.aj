@@ -1,5 +1,4 @@
 package authentication;
-
 import java.io.File;
 
 import javax.security.auth.Subject;
