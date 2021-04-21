@@ -13,7 +13,7 @@ public aspect AuthLogging extends IndentedLogging {
 	|| execution(public * InterAccountTransferSystem.*(..));
 
 	public pointcut authenticationActivities()
-	: call(* LoginContext.login(..));
+	: call(* LoginObject.login());
 
 	public pointcut loggedOperations() 
 	: accountActivities() 

@@ -2,3 +2,5 @@
 /logging/
 /sample_jaas.config.xml
 /sample_jaas.config
+/authentication/
+/authorization/

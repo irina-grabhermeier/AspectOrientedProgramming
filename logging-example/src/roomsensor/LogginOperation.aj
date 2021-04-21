@@ -31,7 +31,7 @@ public aspect LogginOperation {
 	 */
 	after(RoomSensor roomSensor): personDetectedChanges(roomSensor) {
 		// Print the value of the trade
-		System.out.println("Persons Detected New Value "
+		System.out.println("Persons Detected New Value: "
 				+ roomSensor.getPersonsDetected());
 	}
 
